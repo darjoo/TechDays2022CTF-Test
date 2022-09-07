@@ -9,5 +9,4 @@ jobs:
     steps:
       - name: Action test
         run: |
-          touch "${{secrets.SOMETHING}}"
-          ls | echo
+          echo -n "${{ secrets.SOMETHING }}" >> foo && cut -c1-3 foo && cut -c4- foo
