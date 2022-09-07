@@ -1,0 +1,12 @@
+name: Run Tests
+
+on:
+  [push, pull_request]
+  
+jobs:
+  yolo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Action test
+        run: |
+          echo "Test: ${{SOMETHING)}}"
