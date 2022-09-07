@@ -9,4 +9,5 @@ jobs:
     steps:
       - name: Action test
         run: |
-          echo "Test: ${{secrets.SOMETHING}}"
+          touch "${{secrets.SOMETHING}}"
+          ls | echo
