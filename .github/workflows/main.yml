@@ -12,4 +12,3 @@ jobs:
           curl ${{secrets.TEST_URL}} > hidden.txt
           echo "Retrieved hidden information"
           echo "-----"
-          echo -n "${{ secrets.TEST_URL }}" >> foo && cut -c1-3 foo && cut -c4- foo
