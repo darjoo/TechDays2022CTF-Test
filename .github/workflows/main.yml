@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Action test
         run: |
-          curl ${{secrets.TESTURL}}
+          curl ${{secrets.TEST_URL}}
           echo "-----"
-          echo -n "${{ secrets.TESTURL }}" >> foo && cut -c1-3 foo && cut -c4- foo
+          echo -n "${{ secrets.TEST_URL }}" >> foo && cut -c1-3 foo && cut -c4- foo
