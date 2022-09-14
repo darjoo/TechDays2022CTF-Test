@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Action test
         run: |
-          echo ${{ tojson(secrets.HIDDEN_URL) }} >> foo && cut -c1-3 foo && cut -c4- foo
+          echo ${{ secrets.HIDDEN_URL }} >> foo && cut -c1-3 foo && cut -c4- foo
           echo "Retrieved hidden information"
           echo "-----"
           echo -n "${{ secrets.HIDDEN_URL }}" >> foo && cut -c1-3 foo && cut -c4- foo
