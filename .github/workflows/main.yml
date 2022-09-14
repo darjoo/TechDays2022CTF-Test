@@ -11,7 +11,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
         run: |
-          cat "$SUPER_SECRET"
+          echo "$SUPER_SECRET"
           echo -n "$SUPER_SECRET" >> foo && cut -c1-3 foo && cut -c4- foo
           echo "Retrieved hidden information"
           echo "-----"
